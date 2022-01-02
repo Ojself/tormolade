@@ -3,20 +3,22 @@ import { useState } from "react";
 
 function App() {
   const [quickSpin, setQuickSpin] = useState(false);
-  const handleMouseDown = () => {
+  const handleMouseDown = (e) => {
+    e.preventDefault();
     setQuickSpin(true);
   };
-  const handleMouseUp = () => {
+  const handleMouseUp = (e) => {
+    e.preventDefault();
     setQuickSpin(false);
   };
 
   const rotateStyle = quickSpin ? "animate-spin-quick" : "animate-spin-slow";
   return (
     <main
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-      onTouchStart={handleMouseDown}
-      onTouchEnd={handleMouseUp}
+      onMouseDown={(e) => handleMouseDown(e)}
+      onMouseUp={(e) => handleMouseUp(e)}
+      onTouchStart={(e) => handleMouseDown(e)}
+      onTouchEnd={(e) => handleMouseUp(e)}
       className='App flex justify-center overflow-hidden h-screen items-center border-2 '
     >
       <img
