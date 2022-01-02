@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/tormolade/static/css/main.16891547.css",
-    "main.js": "/tormolade/static/js/main.66e07421.js",
+    "main.js": "/tormolade/static/js/main.ecfbe7ab.js",
     "static/media/logo.png": "/tormolade/static/media/logo.650fc77aab5cd6595d37.png",
     "index.html": "/tormolade/index.html",
     "main.16891547.css.map": "/tormolade/static/css/main.16891547.css.map",
-    "main.66e07421.js.map": "/tormolade/static/js/main.66e07421.js.map"
+    "main.ecfbe7ab.js.map": "/tormolade/static/js/main.ecfbe7ab.js.map"
   },
   "entrypoints": [
     "static/css/main.16891547.css",
-    "static/js/main.66e07421.js"
+    "static/js/main.ecfbe7ab.js"
   ]
 }
