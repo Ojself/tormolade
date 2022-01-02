@@ -15,7 +15,9 @@ function App() {
     <main
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
-      className='App flex justify-center h-screen items-center border-2 '
+      onTouchStart={handleMouseDown}
+      onTouchEnd={handleMouseUp}
+      className='App flex justify-center overflow-hidden h-screen items-center border-2 '
     >
       <img
         src={logo}
