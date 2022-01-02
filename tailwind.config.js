@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        "spin-slow": "spin 21s linear infinite",
+        "spin-slow": "spin 25s linear infinite",
+        "spin-quick": "spin 1s linear infinite",
       },
     },
   },

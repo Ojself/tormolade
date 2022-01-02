@@ -2,16 +2,24 @@ import logo from "./logo.png";
 import { useState } from "react";
 
 function App() {
-  const [rotating, setRotating] = useState(0);
-  const handleStop = () => {};
+  const [quickSpin, setQuickSpin] = useState(false);
+  const handleMouseClick = () => {
+    if (quickSpin) return;
+    setQuickSpin(true);
+    setTimeout(() => {
+      setQuickSpin(false);
+    }, 1500);
+  };
+
+  const rotateStyle = quickSpin ? "animate-spin-quick" : "animate-spin-slow";
   return (
     <main
-      onClick={handleStop}
+      onClick={handleMouseClick}
       className='App flex justify-center h-screen items-center border-2 '
     >
       <img
         src={logo}
-        className='App-logo animate-spin-slow h-42 lg:h-screen w-auto overflow-hidden'
+        className={`App-logo ${rotateStyle} h-42 lg:h-screen w-auto overflow-hidden`}
         alt='logo'
       />
     </main>
