@@ -3,23 +3,23 @@ import { useState } from "react";
 
 function App() {
   const [quickSpin, setQuickSpin] = useState(false);
-  const handleMouseClick = () => {
-    if (quickSpin) return;
+  const handleMouseDown = () => {
     setQuickSpin(true);
-    setTimeout(() => {
-      setQuickSpin(false);
-    }, 1500);
+  };
+  const handleMouseUp = () => {
+    setQuickSpin(false);
   };
 
   const rotateStyle = quickSpin ? "animate-spin-quick" : "animate-spin-slow";
   return (
     <main
-      onClick={handleMouseClick}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
       className='App flex justify-center h-screen items-center border-2 '
     >
       <img
         src={logo}
-        className={`App-logo ${rotateStyle} h-42 lg:h-screen w-auto overflow-hidden`}
+        className={`App-logo ${rotateStyle} h-80 lg:h-96 w-auto overflow-hidden`}
         alt='logo'
       />
     </main>
