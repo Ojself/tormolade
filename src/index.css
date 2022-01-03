@@ -7,3 +7,28 @@
   margin: 0px;
   object-fit: border-box;
 }
+
+.logo {
+  height: 80vh;
+  width: 40vw;
+  background-image: url("./logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.quick {
+  animation: spin 1s infinite linear;
+}
+.slow {
+  animation: spin 20s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

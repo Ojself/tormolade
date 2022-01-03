@@ -1,4 +1,3 @@
-import logo from "./logo.png";
 import { useState } from "react";
 
 function App() {
@@ -12,20 +11,16 @@ function App() {
     setQuickSpin(false);
   };
 
-  const rotateStyle = quickSpin ? "animate-spin-quick" : "animate-spin-slow";
+  const rotateStyle = quickSpin ? "quick spin" : "slow spin";
   return (
     <main
       onMouseDown={(e) => handleMouseDown(e)}
       onMouseUp={(e) => handleMouseUp(e)}
       onTouchStart={(e) => handleMouseDown(e)}
       onTouchEnd={(e) => handleMouseUp(e)}
-      className='App flex justify-center overflow-hidden h-screen items-center border-2 '
+      className='flex justify-center overflow-hidden h-screen items-center border-2 '
     >
-      <img
-        src={logo}
-        className={`App-logo ${rotateStyle} h-80 lg:h-96 w-auto overflow-hidden`}
-        alt='logo'
-      />
+      <div className={`${rotateStyle} logo `} alt='tormolade-logo' />
     </main>
   );
 }
