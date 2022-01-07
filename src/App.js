@@ -1,6 +1,9 @@
 import { useState } from "react";
 
 function App() {
+  console.log(
+    "Hey curious person! If you like my jam, you might like my code! Send me an email tormod.flesjo@gmail.com"
+  );
   const [quickSpin, setQuickSpin] = useState(false);
   const handleMouseDown = (e) => {
     e.preventDefault();
